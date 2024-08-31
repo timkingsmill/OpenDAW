@@ -19,6 +19,11 @@ if (NOT EXISTS "${OPEN_DAW_SOURCE_DIR}/libs/JUCE/README.md")
         "To resolve this, please run `git submodule update --init --recursive` and re-run CMake!")
 endif()
 
+# -------------------------------------------------------------------
+# Set JUCE target build options.
+# Improves module source grouping.
+set(JUCE_ENABLE_MODULE_SOURCE_GROUPS ON)
+
 # Add src subdirectory -------------------------------------------------------------
 add_subdirectory(src)
 
