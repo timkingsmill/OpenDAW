@@ -22,7 +22,8 @@ target_sources(${PROJECT_NAME} PRIVATE
     src/MainComponent.h
     src/MainComponent.cpp
     #Source/Plugins/IOConfigurationWindow.cpp
-    #Source/Plugins/InternalPlugins.cpp
+    src/Plugins/InternalPlugins.h
+    src/Plugins/InternalPlugins.cpp
     #Source/Plugins/PluginGraph.cpp
     #Source/UI/GraphEditorPanel.cpp
     #Source/UI/MainHostWindow.cpp

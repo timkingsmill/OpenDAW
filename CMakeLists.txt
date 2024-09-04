@@ -11,6 +11,11 @@ message(STATUS "Compiler version is ${CMAKE_CXX_COMPILER_VERSION}")
 math(EXPR OPEN_DAW_BITNESS "${CMAKE_SIZEOF_VOID_P} * 8" OUTPUT_FORMAT DECIMAL)
 message(STATUS "Targeting ${OPEN_DAW_BITNESS}-bit configuration")
 
+# -------------------------------------------------------------------
+#
+add_compile_definitions(DONT_SET_USING_JUCE_NAMESPACE)
+
+# -------------------------------------------------------------------
 # Make Sure the JUCE repo is properly cloned ------------------------
 set(OPEN_DAW_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 if (NOT EXISTS "${OPEN_DAW_SOURCE_DIR}/libs/JUCE/README.md")
